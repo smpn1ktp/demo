@@ -945,24 +945,7 @@
               </select>
               <div class="field-error" id="err_rapor_peringkat">⚠️ Wajib memilih Peringkat.</div>
             </div>
-            <div class="field">
-              <label>Nilai Bahasa Indonesia <span class="req">*</span></label>
-              <input id="f_rapor_nilai_bind" type="number" placeholder="0.00 – 100.00" min="0" max="100" step="0.01" oninput="clearFieldError('err_rapor_nilai_bind')">
-              <div class="field-error" id="err_rapor_nilai_bind">⚠️ Wajib mengisi Nilai Bahasa Indonesia.</div>
-              <span class="hint">Bilangan desimal 2 angka di belakang koma, rentang 0–100</span>
-            </div>
-            <div class="field">
-              <label>Nilai Matematika <span class="req">*</span></label>
-              <input id="f_rapor_nilai_mtk" type="number" placeholder="0.00 – 100.00" min="0" max="100" step="0.01" oninput="clearFieldError('err_rapor_nilai_mtk')">
-              <div class="field-error" id="err_rapor_nilai_mtk">⚠️ Wajib mengisi Nilai Matematika.</div>
-              <span class="hint">Bilangan desimal 2 angka di belakang koma, rentang 0–100</span>
-            </div>
-            <div class="field">
-              <label>Nilai IPA <span class="req">*</span></label>
-              <input id="f_rapor_nilai_ipa" type="number" placeholder="0.00 – 100.00" min="0" max="100" step="0.01" oninput="clearFieldError('err_rapor_nilai_ipa')">
-              <div class="field-error" id="err_rapor_nilai_ipa">⚠️ Wajib mengisi Nilai IPA.</div>
-              <span class="hint">Bilangan desimal 2 angka di belakang koma, rentang 0–100</span>
-            </div>
+
             <div class="field">
               <label>Nilai Rata-Rata Rapor <span class="req">*</span></label>
               <input id="f_rapor_nilai_rata" type="number" placeholder="0.00 – 100.00" min="0" max="100" step="0.01" oninput="clearFieldError('err_rapor_nilai_rata')">
@@ -1989,9 +1972,6 @@
       if (adaRapor && adaRapor.value === 'ada') {
         if (!reqF('f_rapor_asal_sekolah', 'err_rapor_asal_sekolah')) ok = false;
         if (!reqF('f_rapor_peringkat',    'err_rapor_peringkat'))    ok = false;
-        if (!reqF('f_rapor_nilai_bind',   'err_rapor_nilai_bind'))   ok = false;
-        if (!reqF('f_rapor_nilai_mtk',    'err_rapor_nilai_mtk'))    ok = false;
-        if (!reqF('f_rapor_nilai_ipa',    'err_rapor_nilai_ipa'))    ok = false;
         if (!reqF('f_rapor_nilai_rata',   'err_rapor_nilai_rata'))   ok = false;
         if (!hasFile('file_peringkat')) { showUploadError('err_peringkat'); ok = false; }
       }
@@ -2676,9 +2656,6 @@
       data.ada_rapor          = gRadio('ada_rapor');
       data.rapor_asal_sekolah = gVal('f_rapor_asal_sekolah');
       data.rapor_peringkat    = gVal('f_rapor_peringkat');
-      data.rapor_nilai_bind   = gVal('f_rapor_nilai_bind');
-      data.rapor_nilai_mtk    = gVal('f_rapor_nilai_mtk');
-      data.rapor_nilai_ipa    = gVal('f_rapor_nilai_ipa');
       data.rapor_nilai_rata   = gVal('f_rapor_nilai_rata');
 
       data.ada_tka            = gRadio('ada_tka');
